@@ -14,7 +14,7 @@ function App() {
     if (sessionStorage.getItem('hash')) setAuth(true)
     setFirst(sessionStorage.getItem('firstname'))
     setLast(sessionStorage.getItem('lastname'))
-    const username = sessionStorage.getItem('username')!==''?sessionStorage.getItem('username'):'add username to telegram'
+    const username = sessionStorage.getItem('username')!==undefined?sessionStorage.getItem('username'):'add username to telegram'
     setUname(username)
     setProfile(sessionStorage.getItem('profile'))
     setLoginAt(new Date(parseInt(sessionStorage.getItem('loginat'))*1000).toLocaleString())
