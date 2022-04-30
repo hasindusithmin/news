@@ -16,7 +16,7 @@ function App() {
     setLast(sessionStorage.getItem('lastname'))
     setUname(sessionStorage.getItem('username'))
     setProfile(sessionStorage.getItem('profile'))
-    setLoginAt(sessionStorage.getItem('loginat'))
+    setLoginAt(new Date(parseInt(sessionStorage.getItem('loginat'))*1000).toLocaleString())
   }, [])
 
 
